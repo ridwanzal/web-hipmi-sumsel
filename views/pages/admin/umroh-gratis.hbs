@@ -1,0 +1,219 @@
+<section class="masthead__container">
+   <div class="container">
+      <div class="row">
+         {{> components/breadcrumb breadcrumbs=breadcrumbs}}
+      </div>
+      <div class="row mb-md-5 mb-2 pb-2 pb-md-5">
+         <div class="col col-12 col-md-6 col-xl-3 mb-1 mb-lg-3">
+            {{> components/sidebar}}
+         </div>
+         <div class="col col-12 col-md-9">
+            <h2 class="card__text fw-bold mb-4">Data Pendaftar Umroh Gratis</h2>
+            <table class="table table-hover js-datatable" id="table-pendaftar">
+               <thead class="table-light">
+                  <tr>
+                     <th>Nama</th>
+                     <th>Telepon</th>
+                     <th>Domisili</th>
+                     <th>Umur</th>
+                     <th>Gender</th>
+                     <th>Jawaban</th>
+                     <th>Foto</th>
+                     <th>Tanggal</th>
+                     <th>Aksi</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  {{#each umroh_gratis}}
+                  <tr>
+                     <td>{{this.nama}}</td>
+                     <td>{{this.phone_number}}</td>
+                     <td>{{this.domisili}}</td>
+                     <td>{{this.umur}}</td>
+                     <td>{{this.gender}}</td>
+                     <td class style="width:240px;line-height:1.8;"
+                        title="{{this.jawaban}}">
+                        {{#if this.jawaban}}
+                        <a href="#"
+                           class="fw-normal open-jawaban"
+                           data-bs-toggle="modal"
+                           data-bs-target="#jawabanModal"
+                           data-nama="{{this.nama}}"
+                           data-jawaban="{{this.jawaban}}">
+                           Lihat Jawaban
+                        </a>
+                        {{else}}
+                        <span>-</span>
+                        {{/if}}
+                     </td>
+                     <td>
+                        {{#if this.uploads.length}}
+                        <a href="#"
+                           class="fw-normal open-detail"
+                           data-bs-toggle="modal"
+                           data-nama="{{this.nama}}"
+                           data-bs-target="#lightboxModal"
+                           data-images='{{json this.uploads}}'>
+                           Buka
+                        </a>
+                        {{else}}
+                        <span>-</span>
+                        {{/if}}
+                     </td>
+                     <td>{{formatTanggalID this.created_at}}</td>
+                     <td>
+                        {{!-- <form method="POST"
+                           action="/services/umrohgratis/delete/{{this.id}}">
+                           <input type="hidden" name="id" value="{{this.id}}">
+                           <button type="submit"
+                              class="btn btn-sm btn-danger">Hapus</button>
+                        </form> --}}
+                        <span class="text-success">Verified</span>
+                     </td>
+                  </tr>
+                  {{/each}}
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+</section>
+
+<!-- Bootstrap Modal for Lightbox -->
+{{!-- <div class="modal fade" id="lightboxModal" tabindex="-1"
+   aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+         <div class="modal-body p-0 text-center">
+            <img id="lightboxImage" src class="img-fluid rounded" alt="Preview">
+         </div>
+      </div>
+   </div>
+</div> --}}
+
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">Image Detail</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+               aria-label="Close"></button>
+         </div>
+         <div class="modal-body d-flex flex-wrap gap-2" id="lightboxContainer">
+            <!-- Images will be inserted here -->
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade" id="jawabanModal" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">Jawaban Detail</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+               aria-label="Close"></button>
+         </div>
+         <div class="modal-body" id="jawabanContent"
+            style="white-space: pre-wrap;">
+         </div>
+      </div>
+   </div>
+</div>
+
+<div id="lightboxOverlay"
+   style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:2000; flex-direction:column;">
+
+   <button id="prevBtn"
+      style="position:absolute; left:20px; background:none; border:none; color:white; font-size:2rem; cursor:pointer;">&#10094;</button>
+   <img id="lightboxFullImage" src style="max-width:90%; max-height:90%;" />
+   <button id="nextBtn"
+      style="position:absolute; right:20px; background:none; border:none; color:white; font-size:2rem; cursor:pointer;">&#10095;</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const lightboxContainer = document.getElementById('lightboxContainer');
+    const overlay = document.getElementById('lightboxOverlay');
+    const overlayImage = document.getElementById('lightboxFullImage');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let imagesArray = [];
+    let currentIndex = 0;
+
+    // Populate modal thumbnails
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('open-detail')) {
+            e.preventDefault();
+            imagesArray = JSON.parse(e.target.getAttribute('data-images'));
+            lightboxContainer.innerHTML = '';
+            const namaText = e.target.getAttribute('data-nama') || '';
+
+            document.querySelector('#lightboxModal .modal-title').textContent = `Jawaban Detail - ${namaText}`;
+
+            imagesArray.forEach((src, index) => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.className = 'img-thumbnail';
+                img.style.maxWidth = '150px';
+                img.style.cursor = 'pointer';
+                img.onerror = () => img.src = 'https://mrpbylt.com/assets/images/placeholder.jpg';
+
+                img.addEventListener('click', () => openOverlay(index));
+
+                lightboxContainer.appendChild(img);
+            });
+        }
+    });
+
+    function openOverlay(index) {
+        currentIndex = index;
+        overlayImage.src = imagesArray[currentIndex];
+        overlay.style.display = 'flex';
+    }
+
+    prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
+        overlayImage.src = imagesArray[currentIndex];
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % imagesArray.length;
+        overlayImage.src = imagesArray[currentIndex];
+    });
+
+    // Close overlay on background click
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.style.display = 'none';
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('open-jawaban')) {
+            e.preventDefault();
+            const jawabanText = e.target.getAttribute('data-jawaban') || '';
+            const namaText = e.target.getAttribute('data-nama') || '';
+
+            document.getElementById('jawabanContent').textContent = jawabanText;
+            document.querySelector('#jawabanModal .modal-title').textContent = `Jawaban Detail - ${namaText}`;
+        }
+    });
+
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('open-kualifikasi')) {
+            e.preventDefault();
+            const kualifikasiText = e.target.getAttribute('data-kualifikasi') || '';
+            const namaText = e.target.getAttribute('data-nama') || '';
+
+            document.getElementById('kualifikasiContent').textContent = kualifikasiText;
+            document.querySelector('#kualifikasiModal .modal-title').textContent = `Kualifikasi Detail - ${namaText}`;
+        }
+    });
+});
+</script>

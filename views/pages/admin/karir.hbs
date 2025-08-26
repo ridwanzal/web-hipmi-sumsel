@@ -1,0 +1,128 @@
+<section class="masthead__container">
+   <div class="container">
+      <div class="row">
+         {{> components/breadcrumb breadcrumbs=breadcrumbs}}
+      </div>
+      <div class="row mb-md-5 mb-2 pb-2 pb-md-5">
+         <div class="col col-12 col-md-6 col-xl-3 mb-1 mb-lg-3">
+            {{> components/sidebar}}
+         </div>
+         <div class="col col-12 col-md-9">
+            <form method="POST" action="/services/karir/add">
+               <div class="card__border">
+                  <h2 class="card__text fw-bold mb-4">Karir</h2>
+
+                  <label class="form-label">Nama Lowongan</label>
+                  <div class="form-group mb-3">
+                     <input type="text" name="nama_lowongan"
+                        class="form-control" required />
+                  </div>
+
+                  <label class="form-label">Penempatan</label>
+                  <div class="form-group mb-3">
+                     <input type="text" class="form-control"
+                        name="penempatan" />
+                     <small class="text-muted">Pilihan Jakarta, Bandung,
+                        Palembang (Pisahkan dengan koma)</small>
+                  </div>
+
+                  <label class="form-label">Status</label>
+                  <div class="form-group mb-3">
+                     <select class="form-control" name="status">
+                        <option value="Full-Time">Full-Time</option>
+                        <option value="Kontrak">Kontrak</option>
+                        <option value="Freelance">Freelance</option>
+                     </select>
+                  </div>
+
+                  <label class="form-label">Status Penempatan</label>
+                  <div class="form-group mb-3">
+                     <select class="form-control" name="status_penempatan">
+                        <option value="On-site">On-site</option>
+                        <option value="Hybrid">Hybrid</option>
+                        <option value="Remote">Remote/WFH</option>
+                     </select>
+                  </div>
+
+                  <label class="form-label">Jenjang</label>
+                  <div class="form-group mb-3">
+                     <input type="text" class="form-control" name="jenjang" />
+                     <small class="text-muted">Pilihan SLTA, D3, D4, D5, S1, S2,
+                        S3 (Pisahkan dengan koma)</small>
+                  </div>
+
+                  <label class="form-label">Kualifikasi</label>
+                  <div class="form-group mb-3">
+                     <textarea name="kualifikasi" class="form-control" rows="5"
+                        required></textarea>
+                  </div>
+
+                  <button type="submit"
+                     class="btn btn-sm btn-success">Simpan</button>
+               </div>
+            </form>
+
+            <div class="mt-lg-3 mt-2">
+               <table class="table table-hover js-datatable">
+                  <thead>
+                     <th>Lowongan</th>
+                     <th>Penempatan</th>
+                     <th>Status</th>
+                     <th>Status Penempatan</th>
+                     <th>Jenjang</th>
+                     <th>Kualifikasi</th>
+                     <th>Tanggal</th>
+                     <th>Aksi</th>
+                  </thead>
+                  {{#each karir}}
+                  <tbody>
+                     <tr>
+                        <td>{{this.nama_lowongan}}</td>
+                        <td>{{this.penempatan}}</td>
+                        <td>{{this.status}}</td>
+                        <td>{{this.status_penempatan}}</td>
+                        <td>{{this.jenjang}}</td>
+                        <td>
+                           <a href="#"
+                              class="fw-normal open-kualifikasi"
+                              data-bs-toggle="modal"
+                              data-bs-target="#kualifikasiModal"
+                              data-nama="{{this.nama}}"
+                              data-kualifikasi="{{this.kualifikasi}}">
+                              Lihat Jawaban
+                           </a>
+
+                        </td>
+
+                        <td>{{formatTanggalID this.created_at}}</td>
+                        <td>
+                           <form method="POST"
+                              action="/services/gallery/delete/{{this.id}}"
+                              onsubmit="return confirm('Yakin ingin menghapus?')">
+                              <button type="submit"
+                                 class="btn btn-sm btn-danger">Hapus</button>
+                           </form>
+                        </td>
+                     </tr>
+                  </tbody>
+                  {{/each}}
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+<div class="modal fade" id="kualifikasiModal" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">Kualifikasi Detail</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+               aria-label="Close"></button>
+         </div>
+         <div class="modal-body" id="kualifikasiContent">
+         </div>
+      </div>
+   </div>
+</div>

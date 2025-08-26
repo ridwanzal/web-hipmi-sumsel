@@ -1,0 +1,57 @@
+<section class="masthead__container">
+   <div class="container">
+      <div class="row">
+         {{> components/breadcrumb breadcrumbs=breadcrumbs}}
+      </div>
+      <div class="row mb-md-5 mb-2 pb-2 pb-md-5">
+         <div class="col col-12 col-md-6 col-xl-3 mb-1 mb-lg-3">
+            {{> components/sidebar}}
+         </div>
+         <div class="col col-12 col-md-9">
+            <form method="POST" action="/services/gallery/add"  enctype="multipart/form-data">
+               <div class="card__border ">
+                     <h2 class="card__text fw-bold mb-4">Galeri</h2>
+                     <label for="name" class="form-label">Thumbnail</label>
+                     <div class="form-group mb-3">
+                        <input type="file" name="filename" class="form-control" placeholder="Link Thumbnail" required/>
+                     </div>
+                     <label for="name" class="form-label">Kategori</label>
+                     <div class="form-group mb-3">
+                        <select class="form-select" name="type" required>
+                           <option value="thaif">Thaif</option>
+                           <option value="turki">Turki</option>
+                           <option value="dubai">Dubai</option>
+                           <option value="alula">Al Ula</option>
+                        </select>
+                     </div>
+                     <button type="submit" class="btn btn-sm btn-success">Simpan</button>
+               </div>
+            </form>
+            <div class="mt-lg-3 mt-2">
+               <table class="table table-hover js-datatable">
+               <thead>
+                     <th>Filename</th>
+                     <th>Tipe/Kategori</th>
+                     <th>Path</th>
+                     <th>Tindakan</th>
+               </thead>
+               {{#each gallery}}
+               <tbody>
+                  <tr>
+                     <td>{{this.filename}}</td>
+                     <td>{{this.type}}</td>
+                     <td>{{formatTanggalID this.created_at}}</td>
+                     <td>
+                        <form method="POST" action="/services/gallery/delete/{{this.id}}" onsubmit="return confirm('Yakin ingin menghapus?')">
+                           <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+                        </form>
+                     </td>
+                  </tr>
+               </tbody>
+               {{/each}}
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

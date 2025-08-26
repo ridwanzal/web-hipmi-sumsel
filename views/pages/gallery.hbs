@@ -1,0 +1,126 @@
+{{> components/navigation}}
+
+<div class="masthead__container">
+  <div class="container">
+    <div class="row">
+      {{> components/breadcrumb breadcrumbs=breadcrumbs}}
+    </div>
+  </div>
+
+  <!-- Intro section -->
+  <div class="container">
+    <div class="row justify-content-center mb-lg-5 mb-4">
+      <div class="col col-lg-4 col-12 mb-lg-2 mb-4" data-aos="fade"
+        data-aos-delay="0" data-aos-duration="1500">
+        <img loading="lazy" src="/images/banners/banner.jpg"
+          class="w-100 pe-lg-3 pe-2" alt="Visa" />
+      </div>
+      <div class="col col-lg-4 col-12 position-relative">
+        <div class="center-vertical">
+          <h1 class="fw-bold fs-3 mb-lg-4 mb-3">
+            Kami Selalu Abadikan Jejak Perjalanan Suci Jamaah Bersama Payung
+            Madinah!
+          </h1>
+          <p class="mb-lg-5 mb-4">
+            Lihat bagaimana setiap langkah para jamaah kami dipenuhi
+            kebersamaan, kekhusyukan, dan keindahan ibadah di Tanah Suci
+          </p>
+          <a class="bt block-mobile orange text-white mb-0 mb-lg-2"
+            href="http://linktr.ee/payungmadinahtour" target="_blank">
+            <i class="bi bi-whatsapp me-2"></i>Konsultasi Gratis
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second intro section -->
+    <div class="row justify-content-center mb-lg-5 mb-4">
+      <div class="col col-lg-4 col-12 position-relative mb-lg-2 mb-4">
+        <div class="center-vertical">
+          <h1 class="fw-bold fs-3 mb-lg-4 mb-3">Dokumentasi Jamaah</h1>
+          <p>
+            Galeri ini merupakan dokumentasi penuh makna dari perjalanan ibadah
+            para jamaah Payung Madinah.
+            Setiap gambar adalah saksi bisu dari langkah-langkah menuju
+            Baitullah, senyum kebahagiaan, tangis haru,
+            dan momen spiritual yang tak tergantikan...
+          </p>
+        </div>
+      </div>
+      <div class="col col-lg-4 col-12" data-aos="fade" data-aos-delay="250"
+        data-aos-duration="1500">
+        <img loading="lazy" src="/images/banners/banner3.webp"
+          class="w-100 p-lg-3 p-2" alt="Visa" />
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <h4 class="fs-4 mb-2 d-block d-lg-none text-center fw-bold mb-3">Momen
+      Jamaah</h4>
+    <ul
+      class="nav nav-tabs justify-content-lg-end navigen-gallery justify-content-center"
+      id="myTab" role="tablist">
+      <li class="me-auto d-lg-block d-none"><h2 class="fs-4 fw-bold mb-0">Momen
+          Jamaah</h2></li>
+      <li class="nav-item"><button class="nav-link active" id="dubai-tab"
+          data-bs-toggle="tab" data-bs-target="#dubai">Umrah Plus
+          Dubai</button></li>
+      <li class="nav-item"><button class="nav-link" id="turki-tab"
+          data-bs-toggle="tab" data-bs-target="#turki">Umrah Plus
+          Turki</button></li>
+      <li class="nav-item"><button class="nav-link" id="thaif-tab"
+          data-bs-toggle="tab" data-bs-target="#thaif">Umrah Plus
+          Thaif</button></li>
+    </ul>
+
+    <!-- Gallery Content -->
+    <div class="tab-content mb-lg-5 mb-4" id="myTabContent">
+
+      <!-- Dubai -->
+      <div class="tab-pane fade show active" id="dubai">
+        <div class="photo-grid mt-lg-4 mt-3">
+          {{#each galleryDubai}}
+          <a href="/uploads/{{this.filename}}" data-lightbox="dubai"
+            data-aos="fade"
+            data-aos-delay="0" data-aos-duration="1500">
+            <img loading="lazy" src="/uploads/{{this.filename}}"
+              alt="{{this.alt}}">
+          </a>
+          {{/each}}
+        </div>
+      </div>
+
+      <!-- Turki -->
+      <div class="tab-pane fade" id="turki">
+        <div class="photo-grid mt-lg-4 mt-3">
+          {{#each galleryTurki}}
+          <a href="/uploads/{{this.filename}}" data-lightbox="turki"
+            data-aos="fade"
+            data-aos-delay="0" data-aos-duration="1500">
+            <img loading="lazy" src="/uploads/{{this.filename}}"
+              alt="{{this.alt}}">
+          </a>
+          {{/each}}
+        </div>
+      </div>
+
+      <!-- Thaif -->
+      <div class="tab-pane fade" id="thaif">
+        <div class="photo-grid mt-lg-4 mt-3">
+          {{#each galleryThaif}}
+          <a href="/uploads/{{this.filename}}" data-lightbox="thaif"
+            data-aos="fade"
+            data-aos-delay="0" data-aos-duration="1500">
+            <img loading="lazy" src="/uploads/{{this.filename}}"
+              alt="{{this.alt}}">
+          </a>
+          {{/each}}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+{{> components/footer}}

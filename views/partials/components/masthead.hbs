@@ -1,0 +1,68 @@
+{{> components/navigation}}
+
+<div class="masthead_background">
+  <!-- Video background -->
+  <video autoplay muted loop playsinline class="masthead_video">
+    <source src="/video/mastheadhd.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content container -->
+  <div class="container container-valign">
+    <div class="row justify-content-center">
+      {{#if oldState}}
+      <div class="col col-12 col-md-8 col-xl-8 masthead_col">
+        <div class="masthead-textall">
+          <h1 class="text-start mb-2 mb-lg-3 fw-bold fs-1 lh13" style="color: #ffca84;" data-aos-mirror="false"
+            data-aos="fade" data-aos-delay="150" data-aos-duration="1400">
+            Ka'bah adalah Bukti Bahwa Cinta Bisa Punya Arah, Kerinduan Itu Nyata Adanya
+          </h1>
+          <p class="mb-lg-4 text-white text-start fs-4" data-aos-mirror="false" data-aos="fade" data-aos-duration="1400"
+            data-aos-delay="100">Ibadah Nyaman di bawah Naungan Payung Madinah !</p>
+          <div class="d-flex gap-2 d-none">
+            <a class="bt block-mobile orange text-white mb-0 mb-lg-2" href="http://linktr.ee/payungmadinahtour"
+              target="_blank" data-aos-mirror="true" data-aos="fade" data-aos-duration="1750" data-aos-delay="550">
+              <i class="bi bi-whatsapp me-2"></i>Daftar Umroh
+            </a>
+            <a class="bt block-mobile text-white mb-0 mb-lg-2" href="/umroh" target="_self" data-aos-mirror="true"
+              data-aos="fade" data-aos-duration="1500" data-aos-delay="750">
+              Lihat Paket<i class="bi bi-arrow-down-right ms-3"></i>
+            </a>
+          </div>
+          <div class="bt-grouping d-block text-start" target="_blank">
+            <a href="https://www.instagram.com/payungmadinah/?hl=en" class="bcolor fw-bold"
+              style="border: 1px solid #b19167;z-index:-1;"><i class="bi bi-whatsapp me-2"></i>Daftar Umroh</a>
+            <a href="/umroh" class="bwhite text-white" style="border: 1px solid white;z-index:-1;">Lihat Paket Umroh</a>
+          </div>
+        </div>
+      </div>
+      {{else}}
+      <div class="col col-12 col-md-8 col-xl-8 masthead_col">
+        <div class="masthead-textall">
+          <p class="mb-lg-4 mb-2 text-white fw-bold text-center fs-4" data-aos-mirror="false" data-aos="fade" data-aos-duration="1400"
+            data-aos-delay="100">Rasulullah SAW bersabda :</p>
+          <h1 class="text-center mb-3 mb-lg-5 fw-bold lh13" style="color: #ffca84;" data-aos-mirror="false"
+            data-aos="fade" data-aos-delay="150" data-aos-duration="1400">
+            “Orang-orang yang berhaji dan berumrah adalah tamu-tamu Allah. Jika mereka berdoa kepada-Nya, maka Allah akan mengabulkannya. Jika mereka meminta ampunan, maka Allah mengampuni mereka.<br/>(HR. Ibnu Majah, hasan)”  
+          </h1>
+          <div class="d-flex gap-2 d-none">
+            <a class="bt block-mobile orange text-white mb-0 mb-lg-2" href="http://linktr.ee/payungmadinahtour"
+              target="_blank" data-aos-mirror="true" data-aos="fade" data-aos-duration="1750" data-aos-delay="550">
+              <i class="bi bi-whatsapp me-2"></i>Daftar Umroh
+            </a>
+            <a class="bt block-mobile text-white mb-0 mb-lg-2" href="/umroh" target="_self" data-aos-mirror="true"
+              data-aos="fade" data-aos-duration="1500" data-aos-delay="750">
+              Lihat Paket<i class="bi bi-arrow-down-right ms-3"></i>
+            </a>
+          </div>
+          <div class="bt-grouping d-block text-center" target="_blank">
+            <a href="https://www.instagram.com/payungmadinah/?hl=en" class="bcolor fw-bold"
+              style="border: 1px solid #b19167;z-index:-1;"><i class="bi bi-whatsapp me-2"></i>Daftar Umroh</a>
+            <a href="/umroh" class="bwhite text-white" style="border: 1px solid white;z-index:-1;">Lihat Paket Umroh</a>
+          </div>
+        </div>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</div>
