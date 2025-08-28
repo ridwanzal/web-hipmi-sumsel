@@ -6,9 +6,9 @@ const { connection } = require('../config/db');
 router.get('/', function (req, res, next) {
    res.render('pages/contact', {
       messageContact: req.session.messageContact,
-      title: 'Visit Office - Payung Madinah',
+      title: 'Visit Office - HIPMI Sumsel',
       type: "website",
-      author: 'Payung Madinah',
+      author: 'HIPMI Sumsel',
       description: 'Visit Office',
       canonical: 'https://payungmadinah.id/kontak',
       keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',

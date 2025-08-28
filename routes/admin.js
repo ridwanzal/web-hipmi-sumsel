@@ -14,11 +14,11 @@ router.get("/", function (req, res, next) {
         console.error("Error fetching blogs:", err);
         return res.status(500).render("pages/admin/blog", {
           messageAuth: req.session.messageAuth,
-          title: "Admin - Payung Madinah",
+          title: "Admin - HIPMI Sumsel",
           author: "M. Ridwan Zalbina",
           canonical: "https://payungmadinah.id/pages/linkpage",
           description:
-            "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah",
+            "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel",
           breadcrumbs: [{ name: "Home", link: "/" }],
           error: "Gagal mengambil data artikel."
         });
@@ -26,11 +26,11 @@ router.get("/", function (req, res, next) {
 
       res.render("pages/admin/blog", {
         messageAuth: req.session.messageAuth,
-        title: "Admin - Payung Madinah",
+        title: "Admin - HIPMI Sumsel",
         author: "M. Ridwan Zalbina",
         canonical: "https://payungmadinah.id/pages/linkpage",
         description:
-          "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah",
+          "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel",
         breadcrumbs: [{ name: "Home", link: "/" }],
         data: results // 👈 Send data to Handlebars
       });
@@ -39,7 +39,7 @@ router.get("/", function (req, res, next) {
   } else {
     res.render("pages/admin/login", {
       messageAuth: req.session.messageAuth,
-      title: "Admin - Payung Madinah",
+      title: "Admin - HIPMI Sumsel",
       author: "M. Ridwan Zalbina",
       canonical: "https://payungmadinah.id/pages/linkpage",
       breadcrumbs: [
@@ -53,7 +53,7 @@ router.get("/", function (req, res, next) {
       },
     ],
       description: 
-        "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah",
+        "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel",
     });
   }
 });
@@ -67,11 +67,11 @@ router.get("/umroh", function (req, res, next) {
         console.error("Error fetching blogs:", err);
         return res.status(500).render("pages/admin/umroh", {
           messageAuth: req.session.messageAuth,
-          title: "Admin - Payung Madinah",
+          title: "Admin - HIPMI Sumsel",
           author: "M. Ridwan Zalbina",
           canonical: "https://payungmadinah.id/pages/linkpage",
           description:
-            "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah",
+            "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel",
           breadcrumbs: [{ name: "Home", link: "/" }],
           error: "Gagal mengambil data artikel."
         });
@@ -79,11 +79,11 @@ router.get("/umroh", function (req, res, next) {
 
       res.render("pages/admin/umroh", {
         messageAuth: req.session.messageAuth,
-        title: "Admin - Payung Madinah",
+        title: "Admin - HIPMI Sumsel",
         author: "M. Ridwan Zalbina",
         canonical: "https://payungmadinah.id/pages/linkpage",
         description:
-          "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah",
+          "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel",
         breadcrumbs: [{ name: "Home", link: "/" }],
         umroh: results // 👈 Send data to Handlebars
       });
@@ -92,7 +92,7 @@ router.get("/umroh", function (req, res, next) {
   } else {
     res.render("pages/admin/login", {
       messageAuth: req.session.messageAuth,
-      title: "Admin - Payung Madinah",
+      title: "Admin - HIPMI Sumsel",
       author: "M. Ridwan Zalbina",
       canonical: "https://payungmadinah.id/pages/linkpage",
       breadcrumbs: [
@@ -106,7 +106,7 @@ router.get("/umroh", function (req, res, next) {
       },
     ],
       description: 
-        "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah",
+        "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel",
     });
   }
 });
@@ -141,7 +141,7 @@ router.get("/umroh/edit/:id", checkLogin, function (req, res, next) {
         umroh,
         umroh_images: imagesResults, // send images array to view
         messageAuth: req.session.messageAuth,
-        title: "Edit Produk Umroh - Payung Madinah",
+        title: "Edit Produk Umroh - HIPMI Sumsel",
         author: "M. Ridwan Zalbina",
         breadcrumbs: [
           { name: "Home", link: "/" },
@@ -150,7 +150,7 @@ router.get("/umroh/edit/:id", checkLogin, function (req, res, next) {
         ],
         canonical: "https://payungmadinah.id/pages/linkpage",
         description:
-          "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah",
+          "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel",
       });
     });
   });
@@ -176,7 +176,7 @@ router.get("/blog/edit/:id", checkLogin, function (req, res, next) {
     res.render("pages/admin/blog-edit", {
       blog,
       messageAuth: req.session.messageAuth,
-      title: "Edit Artikel - Payung Madinah",
+      title: "Edit Artikel - HIPMI Sumsel",
       author: "M. Ridwan Zalbina",
     breadcrumbs: [
       {
@@ -194,7 +194,7 @@ router.get("/blog/edit/:id", checkLogin, function (req, res, next) {
     ],
       canonical: "https://payungmadinah.id/pages/linkpage",
       description:
-        "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah",
+        "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel",
     });
   });
 });
@@ -202,14 +202,14 @@ router.get("/blog/edit/:id", checkLogin, function (req, res, next) {
 router.get("/berita", checkLogin, function (req, res, next) {
   res.render("pages/admin/index", {
     messageAuth: req.session.messageAuth,
-    title: "Admin - Payung Madinah",
+    title: "Admin - HIPMI Sumsel",
     author: "M. Ridwan Zalbina",
     type: "website",
     canonical: "https://payungmadinah.id/pages/linkpage",
     description:
-      "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah",
+      "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel",
     keywords:
-      "Wujudkan impian Umroh Anda bersama Payung Madinah. Paket Umroh Plus dengan fasilitas terbaik, harga terjangkau, dan layanan terpercaya, Payung Madinah, tentang Payung Madinah, pengembangan web, layanan digital, UI/UX, brand identity, software house Indonesia",
+      "Wujudkan impian Umroh Anda bersama HIPMI Sumsel. Paket Umroh Plus dengan fasilitas terbaik, harga terjangkau, dan layanan terpercaya, HIPMI Sumsel, tentang HIPMI Sumsel, pengembangan web, layanan digital, UI/UX, brand identity, software house Indonesia",
     breadcrumbs: [
       {
         name: "Home",
@@ -229,12 +229,12 @@ router.get("/galeri", checkLogin, function (req, res, next) {
     if (err) throw err;
     res.render("pages/admin/gallery", {
       messageAuth: req.session.messageAuth,
-      title: "Admin - Payung Madinah",
+      title: "Admin - HIPMI Sumsel",
       author: "M. Ridwan Zalbina",
       canonical: "https://payungmadinah.id/pages/linkpage",
       gallery: rows,
       description:
-        "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah",
+        "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel",
       breadcrumbs: [
         {
           name: "Home",
@@ -255,12 +255,12 @@ router.get("/uploader", checkLogin, function (req, res, next) {
     if (err) throw err;
     res.render("pages/admin/uploader", {
       messageAuth: req.session.messageAuth,
-      title: "Admin - Payung Madinah",
+      title: "Admin - HIPMI Sumsel",
       author: "M. Ridwan Zalbina",
       canonical: "https://payungmadinah.id/pages/linkpage",
       blog: rows,
       description:
-        "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah",
+        "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel",
       breadcrumbs: [
         {
           name: "Home",
@@ -278,11 +278,11 @@ router.get("/uploader", checkLogin, function (req, res, next) {
 router.get("/kontak", checkLogin, function (req, res, next) {
   res.render("pages/admin/contact", {
     messageAuth: req.session.messageAuth,
-    title: "Admin - Payung Madinah",
+    title: "Admin - HIPMI Sumsel",
     author: "M. Ridwan Zalbina",
     canonical: "https://payungmadinah.id/pages/linkpage",
     description:
-      "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah",
+      "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel",
     breadcrumbs: [
       {
         name: "Home",
@@ -341,10 +341,10 @@ router.get("/umroh-gratis", checkLogin, function (req, res, next) {
 
     res.render('pages/admin/umroh-gratis', {
       messageAuth: req.session.messageAuth,
-      title: "Umroh Gratis - Payung Madinah",
+      title: "Umroh Gratis - HIPMI Sumsel",
       author: "M. Ridwan Zalbina",
       canonical: "https://payungmadinah.id/pages/linkpage",
-      description: "Data Umroh Gratis - Payung Madinah",
+      description: "Data Umroh Gratis - HIPMI Sumsel",
       breadcrumbs: [
         { name: "Home", link: "/" },
         { name: "Umroh Gratis", link: "/admin/umroh-gratis" },
@@ -360,11 +360,11 @@ router.get("/karir", checkLogin, function (req, res, next) {
     if (err) throw err;
     res.render("pages/admin/karir", {
       messageAuth: req.session.messageAuth,
-      title: "Admin - Payung Madinah",
+      title: "Admin - HIPMI Sumsel",
       author: "M. Ridwan Zalbina",
       canonical: "https://payungmadinah.id/pages/linkpage",
       karir: rows,
-      description: "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah",
+      description: "Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel",
       breadcrumbs: [
         {
           name: "Home",

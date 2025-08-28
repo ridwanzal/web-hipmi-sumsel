@@ -6,9 +6,9 @@ const { connection } = require('../config/db');
 
 router.get('/', function (req, res, next) {
    res.render('pages/works', {
-      title: 'Our Work - Payung Madinah',
+      title: 'Our Work - HIPMI Sumsel',
       type: "website",
-      author: 'Payung Madinah',
+      author: 'HIPMI Sumsel',
       description: 'Projects dan Products yang sedang kami kerjakan',
       canonical: 'https://payungmadinah.id/works',
       keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',

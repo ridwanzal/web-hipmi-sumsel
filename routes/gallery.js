@@ -19,9 +19,9 @@ router.get("/", function (req, res, next) {
 
     res.render("pages/gallery", {
       messageContact: req.session.messageContact,
-      title: "Galeri - Payung Madinah",
+      title: "Galeri - HIPMI Sumsel",
       type: "website",
-      author: "Payung Madinah",
+      author: "HIPMI Sumsel",
       description: "Galeri",
       canonical: "https://payungmadinah.id/galeri",
       keywords:

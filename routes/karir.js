@@ -7,13 +7,13 @@ router.get('/', async (req, res) => {
    try {
       const [karirList] = await promisePool.query('SELECT * FROM karir ORDER BY created_at DESC');
       res.render('pages/karir', {
-         title: 'Karir - Payung Madinah',
+         title: 'Karir - HIPMI Sumsel',
          type: "article",
          canonical: 'https://payungmadinah.id/karir',
-         author: 'Payung Madinah',
+         author: 'HIPMI Sumsel',
          type: "article",
-         description: 'Karir - Payung Madinah',
-         keywords: 'Wujudkan impian Umroh Anda bersama Payung Madinah. Paket Umroh Plus dengan fasilitas terbaik, harga terjangkau, dan layanan terpercaya',
+         description: 'Karir - HIPMI Sumsel',
+         keywords: 'Wujudkan impian Umroh Anda bersama HIPMI Sumsel. Paket Umroh Plus dengan fasilitas terbaik, harga terjangkau, dan layanan terpercaya',
          breadcrumbs: [
             { name: 'Home', link: '/' },
             { name: 'Karir', link: '/karir' }

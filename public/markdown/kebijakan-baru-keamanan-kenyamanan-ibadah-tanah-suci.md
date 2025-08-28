@@ -19,7 +19,7 @@ Bagi jemaah yang termasuk kategori ini, berikut hal yang perlu diperhatikan:
 ✅ Bimbingan: Manfaatkan pendamping dari tim pembimbing haji
 
 4. Fasilitas Pendukung
-Payung Madinah menyediakan layanan khusus untuk jemaah kategori ini:
+HIPMI Sumsel menyediakan layanan khusus untuk jemaah kategori ini:
 
 Pemantauan kesehatan harian oleh dokter tim
 

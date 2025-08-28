@@ -8,11 +8,11 @@ router.get('/', function (req, res, next) {
       res.redirect('/admin');
    }else {
       res.render('pages/admin/login', {
-         title: 'Admin - Payung Madinah',
+         title: 'Admin - HIPMI Sumsel',
          type: "website",
-         author: 'Payung Madinah',
+         author: 'HIPMI Sumsel',
          canonical: '',
-         description: 'Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari Payung Madinah',
+         description: 'Membantu klien untuk membangun produk digital mereka, web dan mobile app dengan kualitas terbaik dari HIPMI Sumsel',
          breadcrumbs: [
             {
                name: 'Login',

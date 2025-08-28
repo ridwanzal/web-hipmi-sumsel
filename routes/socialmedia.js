@@ -5,13 +5,13 @@ const router = express.Router();
 
 router.get('/', function (req, res) {
    res.render('pages/social-media', {
-      title: 'Tim Kami - Payung Madinah',
+      title: 'Tim Kami - HIPMI Sumsel',
       type: "article",
       canonical: 'https://payungmadinah.id/sosial-media',
-      author: 'Payung Madinah',
+      author: 'HIPMI Sumsel',
       type: "article",
-      description: 'Sosial Media - Payung Madinah',
-      keywords: 'Wujudkan impian Umroh Anda bersama Payung Madinah. Paket Umroh Plus dengan fasilitas terbaik, harga terjangkau, dan layanan terpercaya',
+      description: 'Sosial Media - HIPMI Sumsel',
+      keywords: 'Wujudkan impian Umroh Anda bersama HIPMI Sumsel. Paket Umroh Plus dengan fasilitas terbaik, harga terjangkau, dan layanan terpercaya',
       breadcrumbs: [
          { name: 'Home', link: '/' },
          { name: 'Sosial Media', link: '/sosial-media' }

@@ -6,10 +6,10 @@ const { connection } = require('../config/db');
 
 router.get('/', function (req, res, next) {
   res.render('pages/about', {
-    title: 'Tentang - Payung Madinah',
+    title: 'Tentang - HIPMI Sumsel',
     type: "website",
-    author: 'Payung Madinah',
-    description: 'Spesialis Umroh Plus Wujudkan Impian Umroh dengan fasilitas terbaik, berkelas, terjangkau, nyaman dan terpercaya.',
+    author: 'HIPMI Sumsel',
+    description: 'Himpunan Pengusaha Muda Indonesia Sumatera Selatan Wujudkan Impian Umroh dengan fasilitas terbaik, berkelas, terjangkau, nyaman dan terpercaya.',
     canonical: 'https://payungmadinah.id/tentang-kami',
     keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',
     breadcrumbs: [

@@ -9,13 +9,13 @@ const blogsData = require('../public/json/blogsData');
 
 router.get('/', function (req, res) {
    res.render('pages/visa', {
-      title: 'Apply Visa - Payung Madinah',
+      title: 'Apply Visa - HIPMI Sumsel',
       type: "article",
       canonical: 'https://payungmadinah.id/visa',
-      author: 'Payung Madinah',
+      author: 'HIPMI Sumsel',
       type: "article",
-      description: 'Spesialis Umroh Plus Wujudkan Impian Umroh dengan fasilitas terbaik, berkelas, terjangkau, nyaman dan terpercaya.',
-      keywords: 'Wujudkan impian Umroh Anda bersama Payung Madinah. Paket Umroh Plus dengan fasilitas terbaik, harga terjangkau, dan layanan terpercaya',
+      description: 'Himpunan Pengusaha Muda Indonesia Sumatera Selatan Wujudkan Impian Umroh dengan fasilitas terbaik, berkelas, terjangkau, nyaman dan terpercaya.',
+      keywords: 'Wujudkan impian Umroh Anda bersama HIPMI Sumsel. Paket Umroh Plus dengan fasilitas terbaik, harga terjangkau, dan layanan terpercaya',
       breadcrumbs: [
          { name: 'Home', link: '/' },
          { name: 'Apply Visa', link: '/visa' }

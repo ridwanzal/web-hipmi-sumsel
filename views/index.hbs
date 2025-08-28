@@ -1,4 +1,4 @@
-{{> components/masthead}}
+{{!-- {{> components/masthead}}
 
 {{> components/service}}
 
@@ -10,4 +10,139 @@
 
 {{> components/slider}}
 
-{{> components/footer}}
+{{> components/footer}} --}}
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HIPMI — Coming Soon</title>
+  <style>
+    :root{
+      --bg1:#450a0a;
+      --bg2:#1a0303;
+      --card:#2b0a0a;
+      --accent:#ef4444;
+      --muted:#fca5a5;
+      --glass: rgba(255,255,255,0.03);
+      --card-radius:18px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      min-height:100%;
+      background:linear-gradient(135deg,var(--bg1) 0%, var(--bg2) 60%);
+      color:#fee2e2;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+    }
+
+    .card-wrap{
+      width:100%;
+      max-width:680px;
+      display:grid;
+      gap:28px;
+      align-items:center;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border-radius:var(--card-radius);
+      padding:34px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.06);
+      backdrop-filter: blur(6px) saturate(120%);
+    }
+
+    .brand{display:flex;flex-direction:column;gap:18px;align-items:flex-start;}
+    .logo{display:flex;gap:12px;align-items:center;}
+
+    .logo-badge{
+      width:72px;
+      height:72px;
+      border-radius:14px;
+      background: linear-gradient(135deg,var(--accent), #b91c1c);
+      display:grid;
+      place-items:center;
+      box-shadow: 0 6px 18px rgba(239,68,68,0.25);
+      flex:0 0 72px;
+      animation:floaty 5s ease-in-out infinite;
+    }
+
+    .logo-badge svg{width:44px;height:44px}
+    .org-name{line-height:1;}
+    .org-name .title{font-weight:700;font-size:18px;letter-spacing:0.2px}
+    .org-name .small{font-size:12px;color:var(--muted);margin-top:4px}
+
+    .headline{font-size:28px;margin:6px 0 0}
+    .desc{color:var(--muted);margin-top:10px;line-height:1.5}
+
+    .info{display:flex;flex-direction:column;gap:18px;}
+    .countdown{display:flex;gap:12px;flex-wrap:wrap}
+    .pill{background:var(--glass);padding:12px 16px;border-radius:12px;min-width:84px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,0.45)}
+    .pill .num{font-weight:700;font-size:18px}
+    .pill .lbl{font-size:11px;color:var(--muted);margin-top:6px}
+
+    .email-row{display:flex;gap:12px;align-items:center;margin-top:6px;}
+    .email-row input[type="email"]{
+      flex:1;
+      padding:12px 14px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.1);
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
+      color:inherit;
+      outline:none;
+      font-size:14px;
+    }
+    .btn{
+      padding:12px 16px;
+      border-radius:12px;
+      background:linear-gradient(90deg,var(--accent),#b91c1c);
+      color:#fff5f5;
+      font-weight:700;
+      border:none;
+      cursor:pointer;
+      min-width:120px;
+    }
+
+    .meta{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:13px;margin-top:8px;}
+    .socials{display:flex;gap:10px}
+    .socials a{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.05);text-decoration:none;color:#fee2e2}
+
+    @media (max-width:880px){.logo-badge{width:64px;height:64px}}
+    @media (max-width:420px){body{padding:20px}.headline{font-size:22px}.card{padding:20px}}
+
+    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+  </style>
+</head>
+<body>
+  <div class="card-wrap">
+    <div class="card">
+      <div class="brand">
+        <div class="logo">
+          <div class="logo-badge">
+            <img src="/images/logo.jpg" width="72" alt="" style="border-radius:8px;"/>
+          </div>
+          <div class="org-name">
+            <div class="title">HIPMI SUMSEL</div>
+            <div class="small">Himpunan Pengusaha Muda Indonesia - Sumatera Selatan</div>
+          </div>
+        </div>
+        <h1 class="headline">Coming Soon — Official Site</h1>
+        <p class="desc">Selamat datang di situs resmi HIPMI Sumatera Selatan.
+Kami adalah organisasi pengusaha muda yang berkomitmen untuk mendorong pertumbuhan ekonomi daerah dan mencetak generasi wirausaha unggul.
+Situs resmi ini sedang dalam tahap pengembangan dan akan segera hadir dengan informasi serta layanan terbaru untuk seluruh anggota dan masyarakat.</p>
+        <div class="meta">📅 Target peluncuran: <strong style="color:var(--accent);margin-left:6px">Q4 2025</strong></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

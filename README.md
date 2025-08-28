@@ -1,6 +1,6 @@
-# Payung Madinah Digital Agency Website
+# HIPMI Sumsel Digital Agency Website
 
-<img loading="lazy" src="https://payungmadinah.id/images/logo-main.svg" alt="Payung Madinah - Spesialis Umroh Plus !" style="width:200px;"/>
+<img loading="lazy" src="https://payungmadinah.id/images/logo-main.svg" alt="HIPMI Sumsel - Himpunan Pengusaha Muda Indonesia Sumatera Selatan !" style="width:200px;"/>
 
 ## Getting Started
 

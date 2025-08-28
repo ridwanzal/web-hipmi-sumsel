@@ -7,12 +7,12 @@ router.get('/', async (req, res, next) => {
    try {
       const [umrohList] = await promisePool.query('SELECT * FROM umroh ORDER BY created_at DESC');
       res.render('index', {
-         title: 'Payung Madinah - Spesialis Umroh Plus',
+         title: 'HIPMI Sumsel - Himpunan Pengusaha Muda Indonesia Sumatera Selatan',
          type: 'website',
          canonical: 'https://payungmadinah.id/',
-         author: 'Payung Madinah',
-         description: 'Wujudkan impian Umroh Anda bersama Payung Madinah...',
-         keywords: 'Umroh Plus, Payung Madinah, Travel Umroh Terpercaya',
+         author: 'HIPMI Sumsel',
+         description: 'Wujudkan impian Umroh Anda bersama HIPMI Sumsel...',
+         keywords: 'Umroh Plus, HIPMI Sumsel, Travel Umroh Terpercaya',
          breadcrumbs: [
             { name: 'Home', link: '/' }
          ],

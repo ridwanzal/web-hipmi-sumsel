@@ -5,8 +5,8 @@ const { connection } = require('../config/db');
 
 router.get('/', function (req, res, next) {
    res.render('pages/service', {
-      title: 'Services - Payung Madinah',
-      author: 'Payung Madinah',
+      title: 'Services - HIPMI Sumsel',
+      author: 'HIPMI Sumsel',
       canonical: 'https://payungmadinah.id/layanan',
       description: 'Jasa bangun Landing Page, Business Website, CMS Website, UI/UX Design, Brand Identity Design, Web Slicing, Mobile App Development',
       keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',
@@ -24,8 +24,8 @@ router.get('/', function (req, res, next) {
 
 router.get('/landing-page', function (req, res, next) {
    res.render('pages/service-landingpage', {
-      title: 'Landing Page - Services - Payung Madinah',
-      author: 'Payung Madinah',
+      title: 'Landing Page - Services - HIPMI Sumsel',
+      author: 'HIPMI Sumsel',
       canonical: 'https://payungmadinah.id/layanan/landingpage',
       description: 'Jasa bangun Landing Page, Business Website, CMS Website, UI/UX Design, Brand Identity Design, Web Slicing, Mobile App Development',
       keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',
@@ -47,8 +47,8 @@ router.get('/landing-page', function (req, res, next) {
 
 router.get('/business-website', function (req, res, next) {
    res.render('pages/service-business-website', {
-      title: 'Business Website - Services - Payung Madinah',
-      author: 'Payung Madinah',
+      title: 'Business Website - Services - HIPMI Sumsel',
+      author: 'HIPMI Sumsel',
       canonical: 'https://payungmadinah.id/layanan/business-website',
       description: 'Jasa bangun Landing Page, Business Website, CMS Website, UI/UX Design, Brand Identity Design, Web Slicing, Mobile App Development',
       keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',
@@ -70,8 +70,8 @@ router.get('/business-website', function (req, res, next) {
 
 router.get('/cms-website', function (req, res, next) {
    res.render('pages/service-cms', {
-      title: 'CMS Website - Services - Payung Madinah',
-      author: 'Payung Madinah',
+      title: 'CMS Website - Services - HIPMI Sumsel',
+      author: 'HIPMI Sumsel',
       canonical: 'https://payungmadinah.id/layanan/cms-website',
       description: 'Jasa bangun Landing Page, Business Website, CMS Website, UI/UX Design, Brand Identity Design, Web Slicing, Mobile App Development',
       keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',
@@ -94,8 +94,8 @@ router.get('/cms-website', function (req, res, next) {
 
 router.get('/ui-ux', function (req, res, next) {
    res.render('pages/service-uiux', {
-      title: 'UI/UX Design Web dan Mobile - Layanan - Payung Madinah',
-      author: 'Payung Madinah',
+      title: 'UI/UX Design Web dan Mobile - Layanan - HIPMI Sumsel',
+      author: 'HIPMI Sumsel',
       canonical: 'https://payungmadinah.id/layanan/ui-ux',
       description: 'Jasa bangun Landing Page, Business Website, CMS Website, UI/UX Design, Brand Identity Design, Web Slicing, Mobile App Development',
       keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',
@@ -117,8 +117,8 @@ router.get('/ui-ux', function (req, res, next) {
 
 router.get('/logo', function (req, res, next) {
    res.render('pages/service-logo', {
-      title: 'Logo & Brand Kit Design - Layanan - Payung Madinah',
-      author: 'Payung Madinah',
+      title: 'Logo & Brand Kit Design - Layanan - HIPMI Sumsel',
+      author: 'HIPMI Sumsel',
       canonical: 'https://payungmadinah.id/layanan/logo',
       description: 'Jasa bangun Landing Page, Business Website, CMS Website, UI/UX Design, Brand Identity Design, Web Slicing, Mobile App Development',
       keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',
@@ -140,8 +140,8 @@ router.get('/logo', function (req, res, next) {
 
 router.get('/web-slicing', function (req, res, next) {
    res.render('pages/service-slicing', {
-      title: 'Web Slicing - Services - Payung Madinah',
-      author: 'Payung Madinah',
+      title: 'Web Slicing - Services - HIPMI Sumsel',
+      author: 'HIPMI Sumsel',
       canonical: 'https://payungmadinah.id/layanan/web-slicing',
       description: 'Jasa bangun Landing Page, Business Website, CMS Website, UI/UX Design, Brand Identity Design, Web Slicing, Mobile App Development',
       keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',
@@ -163,8 +163,8 @@ router.get('/web-slicing', function (req, res, next) {
 
 router.get('/mobile', function (req, res, next) {
    res.render('pages/service-mobile', {
-      title: 'Mobile - Layanan - Payung Madinah',
-      author: 'Payung Madinah',
+      title: 'Mobile - Layanan - HIPMI Sumsel',
+      author: 'HIPMI Sumsel',
       canonical: 'https://payungmadinah.id/layanan/mobile',
       description: 'Jasa bangun Landing Page, Business Website, CMS Website, UI/UX Design, Brand Identity Design, Web Slicing, Mobile App Development',
       keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',
@@ -186,8 +186,8 @@ router.get('/mobile', function (req, res, next) {
 
 router.get('/advertising-media', function (req, res, next) {
    res.render('pages/service-advertising-media', {
-      title: 'Mobile - Layanan - Payung Madinah',
-      author: 'Payung Madinah',
+      title: 'Mobile - Layanan - HIPMI Sumsel',
+      author: 'HIPMI Sumsel',
       type: "website",
       canonical: 'https://payungmadinah.id/layanan/mobile',
       keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',
@@ -210,8 +210,8 @@ router.get('/advertising-media', function (req, res, next) {
 
 router.get('/bi-analytics', function (req, res, next) {
    res.render('pages/service-bi-analytics', {
-      title: 'Business Intelligence and Data Analytics Services - Layanan - Payung Madinah',
-      author: 'Payung Madinah',
+      title: 'Business Intelligence and Data Analytics Services - Layanan - HIPMI Sumsel',
+      author: 'HIPMI Sumsel',
       canonical: 'https://payungmadinah.id/layanan/mobile',
       description: 'Jasa bangun Landing Page, Business Website, CMS Website, UI/UX Design, Brand Identity Design, Web Slicing, Mobile App Development',
       keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',

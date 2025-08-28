@@ -5,7 +5,7 @@ const { connection } = require('../config/db');
 
 router.get('/', function (req, res, next) {
    res.render('pages/kebijakan-privasi', {
-      title: 'Kebijakan Privasi - Payung Madinah',
+      title: 'Kebijakan Privasi - HIPMI Sumsel',
       type: "website",
       canonical: 'https://payungmadinah.id/kebijakan-privasi',
       keywords: 'Umroh, Haji, Umroh Plus, Umroh Plus Dubai, Umroh Plus Thaif, Umroh Plus Turki, Umroh Plus Al-Ula',

@@ -1,4 +1,4 @@
-name: Deploy Payung Madinah Web App
+name: Deploy HIPMI Sumsel Web App
 
 on:
   push:

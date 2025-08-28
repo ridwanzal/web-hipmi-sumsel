@@ -8,12 +8,12 @@ router.get('/', async (req, res) => {
       const [umrohList] = await promisePool.query('SELECT * FROM umroh ORDER BY created_at DESC');
 
       res.render('pages/umroh-list2', {
-         title: 'Beranda - Payung Madinah',
+         title: 'Beranda - HIPMI Sumsel',
          type: 'website',
          canonical: 'https://payungmadinah.id/',
-         author: 'Payung Madinah',
-         description: 'Wujudkan impian Umroh Anda bersama Payung Madinah...',
-         keywords: 'Umroh Plus, Payung Madinah, Travel Umroh Terpercaya',
+         author: 'HIPMI Sumsel',
+         description: 'Wujudkan impian Umroh Anda bersama HIPMI Sumsel...',
+         keywords: 'Umroh Plus, HIPMI Sumsel, Travel Umroh Terpercaya',
          breadcrumbs: [
             { name: 'Home', link: '/' }
          ],
@@ -29,12 +29,12 @@ router.get('/', async (req, res) => {
 router.get('/list', function (req, res) {
    const filter = req.query.filter;
    res.render('pages/umroh-list', {
-      title: 'Daftar Paket Umroh - Payung Madinah',
+      title: 'Daftar Paket Umroh - HIPMI Sumsel',
       type: "article",
       canonical: 'https://payungmadinah.id/umroh',
-      author: 'Payung Madinah',
-      description: 'Spesialis Umroh Plus Wujudkan Impian Umroh dengan fasilitas terbaik, berkelas, terjangkau, nyaman dan terpercaya.',
-      keywords: 'Wujudkan impian Umroh Anda bersama Payung Madinah. Paket Umroh Plus dengan fasilitas terbaik, harga terjangkau, dan layanan terpercaya',
+      author: 'HIPMI Sumsel',
+      description: 'Himpunan Pengusaha Muda Indonesia Sumatera Selatan Wujudkan Impian Umroh dengan fasilitas terbaik, berkelas, terjangkau, nyaman dan terpercaya.',
+      keywords: 'Wujudkan impian Umroh Anda bersama HIPMI Sumsel. Paket Umroh Plus dengan fasilitas terbaik, harga terjangkau, dan layanan terpercaya',
       breadcrumbs: [
          { name: 'Home', link: '/' },
          { name: 'Umroh', link: '/umroh' }
