@@ -137,7 +137,7 @@
         &-action {
             color: white;
             font-weight: 600;
-            background-color: #d02c26;
+            background-color: #951a1f;
             margin-left: auto;
             border-radius: 2px;
             padding: 2px 6px;
@@ -151,7 +151,7 @@
     }
 
     &--subheadline {
-        background-color: #d02c26;
+        background-color: #951a1f;
         border-radius: 12px;
         font-size: 16px;
         padding: 8px;
@@ -280,10 +280,10 @@
     }
 
     &.bronze {
-        border: 2px solid #d02c26;
+        border: 2px solid #951a1f;
 
         .package-background {
-            background: linear-gradient(135deg, #977e5f, #b29671, #d02c26);
+            background: linear-gradient(135deg, #977e5f, #b29671, #951a1f);
             /* rich, warm spotlight gold */
         }
     }

@@ -224,97 +224,10 @@ img {
 }
 
 .navbar-custom {
-	background: linear-gradient(
-		to bottom,
-		rgba(0, 0, 0, 0.7) 0%,
-		rgba(0, 0, 0, 0.4) 30%,
-		rgba(0, 0, 0, 0.2) 60%,
-		rgba(0, 0, 0, 0) 100%
-	);
-
+	 background-color: white;
 	.dropdown-toggle {
-		color: white !important;
+		color: black !important;
 		font-weight: 600;
-	}
-
-	@media #{$media-not-desktop}{
-		background: linear-gradient(
-			to bottom,
-			rgba(0, 0, 0, 1) 0%,
-			rgba(0, 0, 0, 1) 30%,
-			rgba(0, 0, 0, 1) 60%,
-			rgba(0, 0, 0, .9) 100%
-		);
-
-		.nav-link,
-		.nav-item {
-			color: white;
-
-			&:active,
-			&:focus,
-			&:hover {
-				color: white;
-			}
-
-			&.active {
-				color: white !important;
-
-				&:active,
-				&:focus,
-				&:hover {
-					color: white;
-				}
-			}
-
-			&:hover {
-				color: black !important;
-			}
-		}
-	}
-
-	&.whitebg {
-		background-color: white;
-		background: white;
-		.dropdown-toggle {
-			color: black !important;
-			font-weight: 600;
-		}
-
-		.nav-link,
-		.nav-item {
-			color: black;
-
-			&:active,
-			&:focus,
-			&:hover {
-				color: white;
-			}
-
-			&.active {
-				color: white !important;
-
-				&:active,
-				&:focus,
-				&:hover {
-					color: white;
-				}
-			}
-
-			&:hover {
-				color: black !important;
-			}
-		}
-
-		.navbar-brand {
-			.ttw {
-				filter: unset;
-			}
-		}
-
-		.navbar-toggler-icon {
-			background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktbGlzdCIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yLjUgMTJhLjUuNSAwIDAgMSAuNS0uNWgxMGEuNS41IDAgMCAxIDAgMUgzYS41LjUgMCAwIDEtLjUtLjVtMC00YS41LjUgMCAwIDEgLjUtLjVoMTBhLjUuNSAwIDAgMSAwIDFIM2EuNS41IDAgMCAxLS41LS41bTAtNGEuNS41IDAgMCAxIC41LS41aDEwYS41LjUgMCAwIDEgMCAxSDNhLjUuNSAwIDAgMS0uNS0uNSIvPgo8L3N2Zz4=");
-			filter: unset;
-		}
 	}
 
 	@media #{$media-not-desktop} {
@@ -324,7 +237,6 @@ img {
 
 	.navbar-brand {
 		.ttw {
-			filter: brightness(0) invert(1);
 		}
 	}
 }
@@ -335,7 +247,7 @@ img {
 
 .nav-link {
 	transition: all 0.5s ease;
-	color: white;
+	color: black;
 	padding: 0 15px !important;
 	margin-top: 0;
 	border-radius: 50px;
@@ -346,12 +258,11 @@ img {
 	}
 
 	&.active {
-		background-color: #d02c26;
+		background-color: #951a1f;
 		color: white !important;
 
 		&:active,
-		&:focus,
-		&:hover {
+		&:focus {
 			color: white;
 		}
 	}
@@ -366,7 +277,7 @@ img {
 	transform: translateY(0);
 
 	&:hover {
-		color: white !important;
+		color: black !important;
 	}
 }
 
@@ -374,12 +285,12 @@ img {
 	font-size: 14px;
 
 	&:hover {
-		color: white !important;
+		color: black !important;
 	}
 }
 
 .nav-item {
-	color: white;
+	color: black;
 	font-size: 14px;
 	font-weight: 600;
 
@@ -591,7 +502,7 @@ svg #wheel {
 
 .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktbGlzdCIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yLjUgMTJhLjUuNSAwIDAgMSAuNS0uNWgxMGEuNS41IDAgMCAxIDAgMUgzYS41LjUgMCAwIDEtLjUtLjVtMC00YS41LjUgMCAwIDEgLjUtLjVoMTBhLjUuNSAwIDAgMSAwIDFIM2EuNS41IDAgMCAxLS41LS41bTAtNGEuNS41IDAgMCAxIC41LS41aDEwYS41LjUgMCAwIDEgMCAxSDNhLjUuNSAwIDAgMS0uNS0uNSIvPgo8L3N2Zz4=");
-	filter: brightness(0) invert(1);
+	filter: brightness(1) invert(0);
 }
 
 .navbar-brand {
@@ -769,7 +680,7 @@ ul {
 					padding: 3px 12px;
 				}
 				&.active {
-					background-color: #d02c26 !important;
+					background-color: #951a1f !important;
 					color: white !important;
 					border-radius: 50px;
 					padding: 3px 12px;
@@ -930,9 +841,9 @@ ul {
 .masthead_background {
 	background-position: center;
 	background-size: cover;
-	height: calc(100vh + 80px);
+	height: 100%;
 	position: relative;
-	top: -90px;
+	top: -96px;
 
 	@media #{$media-not-desktop} {
 		height: calc(100vh);
@@ -1102,8 +1013,9 @@ body {
 }
 
 .navbar {
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	border-bottom: 1px solid #ccc;
 }
 
 .navbar-expand-lg {
@@ -1166,20 +1078,19 @@ body {
 }
 
 .masthead-textall {
-	padding: 24px 24px !important;
+	padding: 32px 32px !important;
 	border-radius: 64px;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 	bottom: 9.5%;
 	position: absolute;
-	padding: 0 0;
 	z-index: -2;
 	width: 95%;
 	left: 2.5%;
 
 	.bt-grouping{
 		.bcolor{
-			border: 2px solid #d02c26
+			border: 2px solid #951a1f
 		}
 
 		.bwhite{

@@ -22,7 +22,7 @@ BEM Conventions
 		margin-bottom: 16px;
 		font-weight: 600;
 		letter-spacing: 0.4px;
-		color: #d02c26;
+		color: #951a1f;
 
 		@media #{$media-not-desktop} {
 			font-size: 24px;
@@ -219,7 +219,7 @@ small {
 
 	&:hover {
 		text-decoration: none !important;
-		color: #d02c26 !important;
+		color: #951a1f !important;
 	}
 }
 
@@ -312,12 +312,12 @@ label {
 }
 
 .color-orange {
-	color: #d02c26 !important;
+	color: #951a1f !important;
 }
 
 .text-bg-orange{
-	background-color: #d02c26;
-	border: 1px solid #d02c26;
+	background-color: #951a1f;
+	border: 1px solid #951a1f;
 	color: white;
 	display: inline;
 	width: max-content;
@@ -360,6 +360,6 @@ label {
 .pills-text{
 	padding: 3px 12px;
 	color: white;
-	background-color: #d02c26;
+	background-color: #951a1f;
 	border-radius: 50px;
 }

@@ -185,6 +185,28 @@
     }
 }
 
+.masthead-float{
+    position: absolute;
+    z-index: 1;
+    top: 65px;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &--img{
+        border-radius: 8px;
+        height: 100% !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        border-top-left-radius: 8px !important;
+        max-height: 760px;
+
+        @media #{$media-not-desktop} {
+            max-height: unset;
+        }
+    }
+}
+
 .submasthead {
   position: absolute;
   width: 100%;

@@ -197,14 +197,21 @@
 .navbar-expand-lg .navbar-nav .nav-link {
 	margin-left: 8px;
 	margin-right: 8px;
-
 	text-decoration: none !important;
-	color: inherit !important;
-	&:hover,
+	color: black !important;
+
 	&:focus,
 	&:active {
 		text-decoration: none !important;
-		color: inherit !important;
+		color: white !important;
+	}
+
+	&:hover {
+		color: black !important;
+		text-decoration: none !important;
+	}
+	&.active{
+		color: white !important;
 	}
 }
 
