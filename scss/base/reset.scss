@@ -535,7 +535,7 @@ svg #wheel {
 	}
 
 	&:hover {
-		background-color: #fcfcfc;
+		background-color: #eee;
 		border: 1px solid #ccc;
 		.tx-title:hover,
 		.tx-text:hover {
@@ -843,7 +843,7 @@ ul {
 	background-size: cover;
 	height: 100%;
 	position: relative;
-	top: -96px;
+	top: -46px;
 
 	@media #{$media-not-desktop} {
 		height: calc(100vh);

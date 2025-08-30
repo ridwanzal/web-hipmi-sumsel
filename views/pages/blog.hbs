@@ -30,7 +30,7 @@
                      {{this.content}}
                   </p>
                   <img loading="lazy" src="uploads/{{this.thumbnail}}" data-aos="fade" data-aos-delay="0" data-aos-duration="1500"
-                     class="w-100" style="border-radius: 12px; max-height: 180px;"
+                     class="w-100" style="border-radius: 12px; max-height: 180px;" onerror="this.src='https://mrpbylt.com/assets/images/placeholder.jpg';"
                      alt="Visa" />
                </div>
             </div>
@@ -58,7 +58,7 @@
                      <div class="d-flex">
                         <div class="position-relative">
                            <img width="200" height="200" class="card-article"
-                              alt="Images" src="uploads/{{this.thumbnail}}" data-aos="fade" data-aos-delay="0" />
+                              alt="Images" src="uploads/{{this.thumbnail}}" data-aos="fade" data-aos-delay="0" onerror="this.src='https://mrpbylt.com/assets/images/placeholder.jpg';"/>
                         </div>
                         <div class="card-body">
                            <div class="d-flex mb-lg-2">
